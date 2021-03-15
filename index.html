@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<script src="https://cdn.ckeditor.com/4.16.0/basic/ckeditor.js"></script>
+
+    <title>Vídeo Player and Text - For Teachers</title>
+	
+	<style>
+	
+	body {
+	
+	background-color: #444;
+	
+	}
+	
+	</style>
+	
+  </head>
+  <body>
+    
+	<div class="container-fluid">
+	
+	<p class="text-light"> Vídeo Player and Text - For Teachers </p>
+	
+		<div class="row justify-content-center align-items-center" style="height: 100vh">
+		
+				<div class="col-12 col-md-6">
+				
+					<input id="url-video" class="url-video" placeholder="https://www.youtube.com/watch?v=xxxxxxxxxxx" style="width: 500px; border: 0; background-color: #eee">
+					<button class="btn btn-default btn-acessar" style="width: 60px"> go </button>
+
+				
+					<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/W1yjwhUublk" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+				
+				</div>
+				
+				<div class="col-12 col-md-6">
+				
+				<textarea name="editor1"></textarea>
+                <script>
+                        CKEDITOR.replace( 'editor1' );
+                </script>
+				
+				</div>
+		
+		</div>
+	
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script> 
+	
+	$(function() {
+	
+	$(".btn-acessar").on("click", function(e) {
+	
+	var url_video = $(".url-video").val()
+	
+	e.preventDefault()
+	
+	urlf = url_video.split('watch?v=')
+	
+	$(".video").attr("src", urlf[0] + '/embed/' + urlf[1])
+	
+	
+	})
+	
+	})
+	
+	</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
